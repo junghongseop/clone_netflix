@@ -118,6 +118,12 @@ class _CarouselImageState extends State<CarouselImage> {
               ],
             ),
           ),
+          Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: makeIndicator(likes, _currentPage),
+            ),
+          ),
         ],
       ),
     );
