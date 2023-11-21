@@ -56,6 +56,7 @@ class _CarouselImageState extends State<CarouselImage> {
           ),
           Container(
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 Container(
                   child: Column(
@@ -72,13 +73,50 @@ class _CarouselImageState extends State<CarouselImage> {
                       const Text(
                         '내가 찜한 콘텐츠',
                         style: TextStyle(fontSize: 11),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.only(right: 10),
+                  child: TextButton(
+                    onPressed: () {},
+                    style: TextButton.styleFrom(backgroundColor: Colors.white),
+                    child: const Row(
+                      children: <Widget>[
+                        Icon(
+                          Icons.play_arrow,
+                          color: Colors.black,
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(3),
+                        ),
+                        Text(
+                          '재생',
+                          style: TextStyle(color: Colors.black),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(right: 10),
+                  child: Column(
+                    children: <Widget>[
+                      IconButton(
+                        icon: Icon(Icons.info),
+                        onPressed: () {},
+                      ),
+                      const Text(
+                        '정보',
+                        style: TextStyle(fontSize: 11),
                       )
                     ],
                   ),
                 )
               ],
             ),
-          )
+          ),
         ],
       ),
     );
