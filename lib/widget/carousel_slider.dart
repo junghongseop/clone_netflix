@@ -68,7 +68,11 @@ class _CarouselImageState extends State<CarouselImage> {
                           : IconButton(
                               icon: const Icon(Icons.add),
                               onPressed: () {},
-                            )
+                            ),
+                      const Text(
+                        '내가 찜한 콘텐츠',
+                        style: TextStyle(fontSize: 11),
+                      )
                     ],
                   ),
                 )
