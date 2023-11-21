@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:clone_netflix/model/model_movie.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class CarouselImage extends StatefulWidget {
   final List<Movie> movies;
@@ -118,6 +119,27 @@ class _CarouselImageState extends State<CarouselImage> {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+List<Widget> makeIndicator(List list, int _currentPage) {
+  List<Widget> results = [];
+  for (var i = 0; i < list.length; i++) {
+    results.add(
+      Container(
+        width: 8,
+        height: 8,
+        margin: const EdgeInsets.symmetric(
+          vertical: 10.0,
+          horizontal: 2.0,
+        ),
+        decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: _currentPage == i
+                ? const Color.fromRGBO(255, 255, 255, 0.9)
+                : const Color.fromRGBO(255, 255, 255, 0.4)),
       ),
     );
   }
