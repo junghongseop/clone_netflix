@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:clone_netflix/model/model_movie.dart';
+import 'package:clone_netflix/screen/detail_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class CarouselImage extends StatefulWidget {
   final List<Movie> movies;
@@ -101,12 +101,22 @@ class _CarouselImageState extends State<CarouselImage> {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(right: 10),
+                  padding: const EdgeInsets.only(right: 10),
                   child: Column(
                     children: <Widget>[
                       IconButton(
-                        icon: Icon(Icons.info),
-                        onPressed: () {},
+                        icon: const Icon(Icons.info),
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute<Null>(
+                              fullscreenDialog: true,
+                              builder: (BuildContext context) {
+                                return DetailScreen(
+                                    movie: movies[_currentPage]);
+                              },
+                            ),
+                          );
+                        },
                       ),
                       const Text(
                         '정보',
