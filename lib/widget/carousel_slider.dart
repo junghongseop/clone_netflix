@@ -1,6 +1,6 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:clone_netflix/model/model_movie.dart';
 import 'package:flutter/material.dart';
-
 
 class CarouselImage extends StatefulWidget {
   final List<Movie> movies;
@@ -38,15 +38,42 @@ class _CarouselImageState extends State<CarouselImage> {
           ),
           CarouselSlider(
             items: images,
-            onPageChanged: (index) {
-              setState(() {
-                _currentPage = index;
-                _currentKeyword = keywords[_currentPage];
-              });
-            },
+            options: CarouselOptions(
+              onPageChanged: ((index, reason) {
+                setState(() {
+                  _currentPage = index;
+                  _currentKeyword = keywords[_currentPage];
+                });
+              }),
+            ),
           ),
           Container(
-            child: Text(_currentKeyword),
+            padding: const EdgeInsets.fromLTRB(0, 10, 0, 3),
+            child: Text(
+              _currentKeyword,
+              style: const TextStyle(fontSize: 11),
+            ),
+          ),
+          Container(
+            child: Row(
+              children: <Widget>[
+                Container(
+                  child: Column(
+                    children: <Widget>[
+                      likes[_currentPage]
+                          ? IconButton(
+                              icon: const Icon(Icons.check),
+                              onPressed: () {},
+                            )
+                          : IconButton(
+                              icon: const Icon(Icons.add),
+                              onPressed: () {},
+                            )
+                    ],
+                  ),
+                )
+              ],
+            ),
           )
         ],
       ),
