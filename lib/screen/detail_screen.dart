@@ -66,13 +66,55 @@ class _DetailScreenState extends State<DetailScreen> {
                                         fontSize: 16),
                                   ),
                                 ),
+                                Container(
+                                  padding: const EdgeInsets.all(3),
+                                  child: TextButton(
+                                    onPressed: () {},
+                                    style: TextButton.styleFrom(
+                                        backgroundColor: Colors.red),
+                                    child: const Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Icon(
+                                          Icons.play_arrow,
+                                          color: Colors.white,
+                                        ),
+                                        Text(
+                                          '재생',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  padding: const EdgeInsets.all(5),
+                                  child: Text(widget.movie.toString()),
+                                ),
+                                Container(
+                                  padding: const EdgeInsets.all(5),
+                                  alignment: Alignment.centerLeft,
+                                  child: const Text(
+                                    '출연: 현빈, 손예진, 서지혜\n제작자: 이정호, 박지은',
+                                    style: TextStyle(
+                                      color: Colors.white60,
+                                      fontSize: 12,
+                                    ),
+                                  ),
+                                ),
                               ],
                             ),
                           ),
                         ),
                       ),
                     ),
-                  )
+                  ),
+                  Positioned(
+                      child: AppBar(
+                    backgroundColor: Colors.transparent,
+                    elevation: 0,
+                  )),
                 ],
               ),
               makeMenuButton(),
