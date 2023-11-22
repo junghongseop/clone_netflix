@@ -117,7 +117,61 @@ class _DetailScreenState extends State<DetailScreen> {
                   )),
                 ],
               ),
-              makeMenuButton(),
+              Container(
+                color: Colors.black26,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Container(
+                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: InkWell(
+                        onTap: () {},
+                        child: Column(
+                          children: <Widget>[
+                            like
+                                ? const Icon(Icons.check)
+                                : const Icon(Icons.add),
+                            const Padding(
+                              padding: EdgeInsets.all(5),
+                            ),
+                            const Text(
+                              '내가 찜한 콘텐츠',
+                              style: TextStyle(
+                                  fontSize: 11, color: Colors.white60),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: const SizedBox(
+                        child: Column(
+                          children: <Widget>[
+                            Icon(Icons.thumb_up),
+                            Padding(
+                              padding: EdgeInsets.all(5),
+                            ),
+                            Text(
+                              '평가',
+                              style: TextStyle(
+                                  fontSize: 11, color: Colors.white60),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Container(
+                        child: const Column(
+                          children: <Widget>[],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
