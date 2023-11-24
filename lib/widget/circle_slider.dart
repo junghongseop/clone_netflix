@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:clone_netflix/screen/detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:clone_netflix/model/model_movie.dart';
