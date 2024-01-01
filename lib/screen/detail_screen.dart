@@ -144,7 +144,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       ),
                     ),
                     Container(
-                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
                       child: const SizedBox(
                         child: Column(
                           children: <Widget>[
@@ -162,7 +162,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       ),
                     ),
                     Container(
-                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
                       child: Container(
                         child: const Column(
                           children: <Widget>[

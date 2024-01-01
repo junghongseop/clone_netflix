@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Bottom extends StatelessWidget {
+  const Bottom({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,43 +15,63 @@ class Bottom extends StatelessWidget {
           indicatorColor: Colors.transparent,
           tabs: <Widget>[
             Tab(
-              icon: Icon(
-                Icons.home,
-                size: 18,
-              ),
-              child: Text(
-                '홈',
-                style: TextStyle(fontSize: 9),
-              ),
-            ),
-            Tab(
-              icon: Icon(
-                Icons.search,
-                size: 18,
-              ),
-              child: Text(
-                '검색',
-                style: TextStyle(fontSize: 9),
+              icon: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Icon(
+                    Icons.home,
+                    size: 18,
+                  ),
+                  Text(
+                    '홈',
+                    style: TextStyle(fontSize: 9),
+                  ),
+                ],
               ),
             ),
             Tab(
-              icon: Icon(
-                Icons.save_alt,
-                size: 18,
-              ),
-              child: Text(
-                '저장한 컨텐츠 목록',
-                style: TextStyle(fontSize: 9),
+              icon: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Icon(
+                    Icons.search,
+                    size: 18,
+                  ),
+                  Text(
+                    '검색',
+                    style: TextStyle(fontSize: 9),
+                  ),
+                ],
               ),
             ),
             Tab(
-              icon: Icon(
-                Icons.list,
-                size: 18,
+              icon: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Icon(
+                    Icons.save_alt,
+                    size: 18,
+                  ),
+                  Text(
+                    '저장한 컨텐츠 목록',
+                    style: TextStyle(fontSize: 8),
+                  ),
+                ],
               ),
-              child: Text(
-                '더보기',
-                style: TextStyle(fontSize: 9),
+            ),
+            Tab(
+              icon: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Icon(
+                    Icons.list,
+                    size: 18,
+                  ),
+                  Text(
+                    '더보기',
+                    style: TextStyle(fontSize: 9),
+                  ),
+                ],
               ),
             ),
           ],
